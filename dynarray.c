@@ -106,7 +106,7 @@ void dynarray_insert(struct dynarray* da, void* val) {
    */
   int k = 3;
   if (da->size == da->capacity) {
-    _dynarray_resize(da, da->capacity +=k);
+    _dynarray_resize(da, da->capacity * k);
   }
 
   /*
