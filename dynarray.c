@@ -104,8 +104,9 @@ void dynarray_insert(struct dynarray* da, void* val) {
    * Make sure we have enough space for the new element.  Resize if needed.
    * Here, we double the array's capacity each time it needs to be resized.
    */
+  int k = 3;
   if (da->size == da->capacity) {
-    _dynarray_resize(da, 2 * da->capacity);
+    _dynarray_resize(da, da->capacity +=k);
   }
 
   /*
